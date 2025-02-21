@@ -8,6 +8,34 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter feature"
+            android:layout_weight="1"/>
+
+        <ToggleButton
+            android:id="@+id/isToggleOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add"
+        android:layout_gravity="center"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list"
         android:layout_width="match_parent"
