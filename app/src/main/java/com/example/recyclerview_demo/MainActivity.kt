@@ -22,6 +22,10 @@ class MainActivity : AppCompatActivity() {
             str = binding.edittext.text.toString()
             isToggleON = binding.isToggleOn.isChecked
             itemList.add(ModelClass(str,isToggleON))
+            addToRecyclerview()
+
+            binding.edittext.text.clear()
+            binding.isToggleOn.isChecked = false
         }
 
         itemList.add(ModelClass("VoiceToText",false))
@@ -45,10 +49,13 @@ class MainActivity : AppCompatActivity() {
         itemList.add(ModelClass("DynamicThemes", true))
         itemList.add(ModelClass("ScreenMagnification", false))
 
+        addToRecyclerview()
 
+    }
+
+    fun addToRecyclerview(){
         adapter = MyAdapter(itemList)
         binding.rvList.layoutManager = LinearLayoutManager(this)
         binding.rvList.adapter = adapter
-
     }
 }
